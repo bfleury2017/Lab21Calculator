@@ -9,14 +9,16 @@ namespace Lab21Calculator
             do
             {
                 DisplayMenu();
-                int selection = RunSelection();
 
-                //ValidateSelection(ref int selection);
+                int selection = RunSelection();
+                ValidateSelection(ref selection);
+
                 if (selection == 6)
                 {
                     Console.WriteLine("Good bye..");
                     break;
                 }
+
 
                 Console.WriteLine("Press any key to continue");
                 Console.ReadKey();
@@ -28,6 +30,19 @@ namespace Lab21Calculator
         private static void ValidateSelection()
         {
 
+            while (true)
+            {
+                if (selection < 1 || selection > 6)
+                {
+                    Console.Write($"{selection} is not a valid selection, enter another selection: ");
+                    selection = int.Parse(Console.ReadLine());
+                }
+                else
+                {
+                    break;
+
+                }
+            }
         }
 
         private static void DisplayMenu()
