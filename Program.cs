@@ -67,13 +67,13 @@ namespace Lab21Calculator
             switch (selection)
             {
                 case 1:
-                    Console.WriteLine($"{number1} + {number2} = {Calculator.Add(number1, number2)}");
+                    Console.WriteLine($"{number1} + {number2} = {Calculator.Add(number1, number2):F}");
                     break;
                 case 2:
-                    Console.WriteLine($"{number1} - {number2} = {Calculator.Subtract(number1, number2)}");
+                    Console.WriteLine($"{number1} - {number2} = {Calculator.Subtract(number1, number2):F}");
                     break;
                 case 3:
-                    Console.WriteLine($"{number1} * {number2} = {Calculator.Multiply(number1, number2)}");
+                    Console.WriteLine($"{number1} * {number2} = {Calculator.Multiply(number1, number2):F}");
                     break;
                 case 4:
                     if (number2 == 0)
@@ -81,11 +81,11 @@ namespace Lab21Calculator
                         Console.WriteLine("Cannot divide by zero, please try again with valid values");
                         break;
                     }
-                    Console.WriteLine($"{number1} / {number2} = {Calculator.Divide(number1, number2)}");
+                    Console.WriteLine($"{number1} / {number2} = {Calculator.Divide(number1, number2):F}");
 
                     break;
                 case 5:
-                    Console.WriteLine($"{number1} % {number2} = {Calculator.Modulus(number1, number2)}");
+                    Console.WriteLine($"{number1} % {number2} = {Calculator.Modulus(number1, number2):F}");
                     break;
                 default:
                     break;
